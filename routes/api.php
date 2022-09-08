@@ -29,7 +29,7 @@ Route::group(['prefix' => 'auth'], function () {
 
     Route::group(['middleware' => 'auth:api'], function() {
         Route::delete('logout', [AuthUserController::class, 'logout']);
-        Route::get('user', [AuthUserController::class, 'index']);
+        Route::get('user', [AuthUserController::class, 'user']);
     });
 });
 
