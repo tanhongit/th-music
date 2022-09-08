@@ -18,7 +18,7 @@ class Locale
     public function handle(Request $request, Closure $next)
     {
         // If the user has a preferred language stored in their session, use that, otherwise use the default language
-        $language = Session::get('website_language', config('app.locale'));
+        $language = Session::get('locale', config('app.locale'));
 
         config(['app.locale' => $language]);
 
