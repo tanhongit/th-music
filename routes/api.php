@@ -1,9 +1,9 @@
 <?php
 
+use App\Http\Controllers\Apis\LanguageController;
 use App\Http\Controllers\Auth\AuthUserController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
-use App\Http\Controllers\LanguageController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -33,7 +33,7 @@ Route::group(['prefix' => 'auth'], function () {
     });
 });
 
-Route::group(['middleware' => 'locale'], function() {
+//Route::group(['middleware' => 'locale'], function() {
     Route::get('change-language/{language}',  [LanguageController::class, 'changeLanguage'])->name('change-language');
-});
+//});
 
