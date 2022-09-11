@@ -26,3 +26,9 @@ Homestead.json
 .vscode
 *.sublime-workspace
 note
+
+# swagger
+swagger.json
+development/swagger-constants.php
+openapi.yaml
+api-docs.json

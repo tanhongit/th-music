@@ -12,36 +12,40 @@ class LanguageController extends Controller
      * @param $language
      * @return \Illuminate\Http\JsonResponse
      *
-     * @QA\Info(
-     *     title="Change language",
-     *     description="Change language",
-     *     version="1.0.0"
-     * )
-     * @OA\PathItem(
-     *     path="/api/lang/change/{language}",
-     * )
-     * @QA\Get(
-     *     path="/api/lang/change/{language}",
-     *     description="Change language",
-     *     summary="Change language",
-     *     operationId="changeLanguage",
-     *     produces={"application/json"},
-     *     tags={"Language"},
-     *     @QA\Response(
-     *         response=200,
-     *         description="Change language successfully",
-     *         @QA\Schema(
-     *             type="object",
-     *             @QA\Property(property="signal", type="number"),
-     *             @QA\Property(property="status", type="string"),
-     *             @QA\Property(property="code", type="number"),
-     *             @QA\Property(property="data", type="array",
-     *                  @QA\Items(type="object",
-     *                       @QA\Property(property="language", type="string", example="en")
-     *                  )
-     *             ),
-     *         )
+     * @OA\Get(
+     *   path="/change-language/{language}",
+     *   description="Change language",
+     *   summary="Change language",
+     *   operationId="changeLanguage",
+     *   tags={"Language"},
+     *   @OA\Parameter(
+     *     name="language",
+     *     in="path",
+     *     description="Language",
+     *     required=true,
+     *     @OA\Schema(
+     *         type="string",
+     *         enum={"en", "vi"},
+     *         default="en"
      *     )
+     *   ),
+     *   @OA\Response(
+     *     response=200,
+     *     description="Change language successfully",
+     *     @OA\JsonContent(
+     *       type="object",
+     *       @OA\Property(property="signal", type="number"),
+     *       @OA\Property(property="status", type="string", example="success"),
+     *       @OA\Property(property="code", type="number"),
+     *       @OA\Property(property="data", type="object",
+     *         @OA\Property(property="language", type="string", example="en"),
+     *       )
+     *    )
+     *   ),
+     *   @OA\Response(
+     *     response="default",
+     *     description="Error"
+     *   )
      * )
      */
     public function changeLanguage($language)
