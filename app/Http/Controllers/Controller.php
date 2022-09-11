@@ -29,13 +29,17 @@ class Controller extends BaseController
      *     )
      * )
      *  @OA\Server(
-     *      url="https://music.local:447/api/",
+     *      url=L5_SWAGGER_CONST_DEV_HOST,
      *      description="Development Environment"
      *  )
      *
      *  @OA\Server(
-     *      url="https://music.local:447/api/",
+     *      url=L5_SWAGGER_CONST_START_HOST,
      *      description="Staging Environment"
+     * )
+     * @OA\Schemes(
+     *     scheme="http",
+     *     scheme="https",
      * )
      * @OA\ExternalDocumentation(
      *     description="Find out more about Swagger",

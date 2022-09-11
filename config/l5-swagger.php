@@ -290,6 +290,8 @@ return [
          */
         'constants' => [
             'L5_SWAGGER_CONST_HOST' => env('L5_SWAGGER_CONST_HOST', 'http://my-default-host.com'),
+            'L5_SWAGGER_CONST_DEV_HOST' => env('L5_SWAGGER_CONST_DEV_HOST', 'http://my-dev-host.com') . '/api/',
+            'L5_SWAGGER_CONST_START_HOST' => env('L5_SWAGGER_CONST_START_HOST', 'http://my-start-host.com') . '/api/',
         ],
     ],
 ];
