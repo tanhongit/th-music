@@ -34,17 +34,24 @@ class LanguageController extends Controller
      *     description="Change language successfully",
      *     @OA\JsonContent(
      *       type="object",
-     *       @OA\Property(property="signal", type="number"),
+     *       @OA\Property(property="signal", type="number", example=1),
      *       @OA\Property(property="status", type="string", example="success"),
-     *       @OA\Property(property="code", type="number"),
+     *       @OA\Property(property="code", type="number", example=200),
      *       @OA\Property(property="data", type="object",
      *         @OA\Property(property="language", type="string", example="en"),
      *       )
      *    )
      *   ),
      *   @OA\Response(
-     *     response="default",
-     *     description="Error"
+     *     response="400",
+     *     description="Invalid input",
+     *     @OA\JsonContent(
+     *       type="object",
+     *       @OA\Property(property="signal", type="number", example=0),
+     *       @OA\Property(property="status", type="string", example="error"),
+     *       @OA\Property(property="code", type="number", example=400),
+     *       @OA\Property(property="message", type="string", example="Invalid input"),
+     *     )
      *   )
      * )
      */

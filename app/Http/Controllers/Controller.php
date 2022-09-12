@@ -21,7 +21,7 @@ class Controller extends BaseController
      *     @OA\Contact(
      *         email="tannp27@gmail.com",
      *         name="Tan Nguyen",
-     *         url="tanhongit.com"
+     *         url="https://tanhongit.com"
      *     ),
      *     @OA\License(
      *         name="Apache 2.0",
