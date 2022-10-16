@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('account', 255);
             $table->string('code', 45);
             $table->integer('status')->default(0);
-            $table->enum('type', ['MOBILE', 'EMAIL'])->default('MOBILE');
+            $table->enum('type', ['MOBILE', 'EMAIL'])->default('EMAIL');
             $table->commonFields();
         });
     }

@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Session;
 class LanguageController extends Controller
 {
     /**
-     * @param $language
+     * @param $language : Language code
      * @return \Illuminate\Http\JsonResponse
      *
      * @OA\Get(
