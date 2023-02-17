@@ -4,7 +4,7 @@ Create Music App with Laravel
 
 # 1. Technology
 - PHP ^8.1
-- Laravel Framework 9.x
+- Laravel Framework 10.x
 
 # 2. Configuration requirements
 - Install composer: https://getcomposer.org/
