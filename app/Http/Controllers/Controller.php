@@ -17,7 +17,7 @@ class Controller extends BaseController
      *     description="The Music App API documentation",
      *     version="1.0.0",
      *     title="The Music App API Swagger",
-     *     termsOfService="http://swagger.io/terms/",
+     *     termsOfService="https://swagger.io/terms/",
      *     @OA\Contact(
      *         email="tannp27@gmail.com",
      *         name="Tan Nguyen",
@@ -25,7 +25,7 @@ class Controller extends BaseController
      *     ),
      *     @OA\License(
      *         name="Apache 2.0",
-     *         url="http://www.apache.org/licenses/LICENSE-2.0.html"
+     *         url="https://www.apache.org/licenses/LICENSE-2.0.html"
      *     )
      * )
      *  @OA\Server(
@@ -43,7 +43,7 @@ class Controller extends BaseController
      * )
      * @OA\ExternalDocumentation(
      *     description="Find out more about Swagger",
-     *     url="http://swagger.io"
+     *     url="https://swagger.io"
      * )
      * @OA\PathItem (
      *     path="/",
